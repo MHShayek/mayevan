@@ -1,0 +1,63 @@
+<h1>Login Form</h1>
+<style>
+  h5 {
+    color: red;
+  }
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  form {
+    border: 3px solid #f1f1f1;
+  }
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  .container {
+    padding: 16px;
+  }
+  #submit {
+    background-color: #04aa6d;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+  }
+  button {
+    background-color: #04aa6d;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+</style>
+{%for message in messages %}
+<h5>{{ message}}</h5>
+{%endfor%}
+<form method="POST" action="login">
+  {% csrf_token %}
+  <div class="container">
+    <h3 for="uname"><b>Username</b></h3>
+    <input type="text" name="username" placeholder="Enter Username" />
+
+    <h3 for="psw"><b>Password</b></h3>
+    <input type="password" name="password" placeholder="Enter Password" />
+    <input id="submit" type="submit" />
+  </div>
+</form>
