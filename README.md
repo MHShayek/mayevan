@@ -1,1 +1,1 @@
-# A Django project with Python3 and PostgreSQL. Finally deployed to Heroku.
+# A Django project using Django, Python3, PostgreSQL and Deployed to Heroku.
